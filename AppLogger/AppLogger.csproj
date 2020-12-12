@@ -7,6 +7,7 @@
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <OutputType>Library</OutputType>
     <RepositoryUrl>https://github.com/iamyakose/AppLogger</RepositoryUrl>
+    <IsPackable>true</IsPackable>
   </PropertyGroup>
 
 </Project>

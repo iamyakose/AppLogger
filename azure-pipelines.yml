@@ -1,0 +1,34 @@
+trigger:
+  - main
+
+pool:
+  vmImage: "windows-latest"
+
+stages:
+  - stage: Build_Stage
+    displayName:
+    jobs:
+      - job: BuildNuget
+        displayName: Build Nuget packages
+        variables:
+          BuildConfiguration: release
+        steps:
+          - task: DotNetCoreCLI@2
+            inputs:
+              command: "restore"
+              projects: "**/*.csproj"
+              feedsToUse: "select"
+
+          - task: DotNetCoreCLI@2
+            inputs:
+              command: "build"
+              projects: "**/*.csproj"
+              arguments: "--configuration $(BuildConfiguration)"
+
+          - task: DotNetCoreCLI@2
+            inputs:
+              command: "pack"
+              packagesToPack: "**/*.csproj"
+              versioningScheme: "off"
+
+          -

@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Authors>Yakubu Oseni</Authors>
+    <Company>dk.iamyakose</Company>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <OutputType>Library</OutputType>
+    <RepositoryUrl>https://github.com/iamyakose/AppLogger</RepositoryUrl>
+  </PropertyGroup>
+
+</Project>
